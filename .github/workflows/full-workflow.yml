@@ -20,6 +20,7 @@ jobs:
               path: files
     
     download:
+        needs: upload
         runs-on: windows-latest
 
         steps:
