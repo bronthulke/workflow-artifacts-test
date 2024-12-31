@@ -1,0 +1,19 @@
+name: Upload Steps
+
+on:
+  workflow_call:
+    inputs: {}
+
+jobs:
+  upload:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create artifact drop
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifactOne
+          path: files
